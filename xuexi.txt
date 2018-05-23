@@ -1,0 +1,43 @@
+﻿git使用步骤
+1，安装Git 使用Git bush命令行
+2，在c/user/admin创建一个目录 
+   mkdir  learngit
+   cd learngit
+   pwd
+3.使用Git init将该目录初始化
+    $ git init
+    Initialized empty Git repository in /Users/michael/learngit/.git/
+4,用notepad++创建一个xuexi.TXT文当，放到learngit目录下
+5，使用Git添加命令
+   git add xuexi.txt
+6,用Git commit把文件提交到仓库
+   $ git commit -m "wrote a readme file"//-m后为本次提交的内容说明
+    [ master (root-commit) eaadf4e] wrote a readme file
+    1 file changed, 2 insertions(+)
+    create mode 100644 readme.txt
+使用命令git add <file>，注意，可反复多次使用，添加多个文件；
+使用命令git commit -m <message>，完成。
+7，git status用来查看仓库的变化
+$ git status
+	On branch master
+	Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   readme.txt
+    no changes added to commit (use "git add" and/or "git commit -a")
+8，Git diff可以查看对文件做了哪些修改。
+9, 用git log可以查看什么时间段对源码做了哪些修改 也可以使用git log --pretty oneline 而其产生的就是16进制的版本号
+   44deddd69021a6e46e9e8350b963345a04f23e01 (HEAD -> master) zai tianjia
+   df2e1dcef4babcd52117dae15377e09861d29b04 tianjia
+   8c71ba5d6002f1370930038fd6507039cbc0a6e1 xuexi
+10，版本回退命令为 git reset --hard HEAD^首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，
+当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。
+11,cat xuexi.txt命令可以查看具体内容    git reflog 命令可以查看之前的命令。
+12，git分为工作区（写txt文本的地方），缓存区（stage）使用git add命令添加文本的的所在地，分支（master）使用
+git commit 命令提交缓存区文件到分支的地方。git diff  是你工作区跟statge的比较，这个时候可以看你开发过程中修改了哪些内容
+git diff --cached 是看你stge区和仓库分支上的比较，你add后但是没有commit， 这个时候只是在stage中，可以确认下修改是否正确，
+如果正确无误可以commit合并到分支
+13，当你在工作区修改的文件出现错误，而你想要删除刚做的决定时候，需要使用 git checkout --文件名；
+    当你把文件已经添加到stage区后，你需要使用 git reset HEAD 文件名来回到第一步，然后按照第一步来执行。
+14，rm为删除命令，即删除工作区的文档，
