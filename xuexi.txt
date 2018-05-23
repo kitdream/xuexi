@@ -40,4 +40,10 @@ git diff --cached 是看你stge区和仓库分支上的比较，你add后但是�
 如果正确无误可以commit合并到分支
 13，当你在工作区修改的文件出现错误，而你想要删除刚做的决定时候，需要使用 git checkout --文件名；
     当你把文件已经添加到stage区后，你需要使用 git reset HEAD 文件名来回到第一步，然后按照第一步来执行。
-14，rm为删除命令，即删除工作区的文档，
+14，rm为删除命令，即删除工作区的文档，如果需要删除版本库文件，需要git rm 文件名。并且有 git commit -m"remove 文件名"
+    git checkout -- 文件名来还原被误删的文件，只要版本库还存在。
+15，git push origin master为把本地的master分支推送到github
+16  git checkout -b dev     创建新的分支Dev       git branch  查看当前分支
+    git checkout  -d dev     删除分支       git checkout master 切换分支
+	git merge dev 合并指定分支到当前分支
+	zai tianjiayihang     zeaisdnfoawejaoifjaoi
