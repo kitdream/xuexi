@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+  int a,b,sum;
+  a=22;b=234;  
+  sum=a+b;
+  printf("sum=%d\n",sum); 
+  return 0
+}
+#include<stdio.h>
+#pragma warning(disable:4996)
+int main()
+{
+   int a,b,sum;
+   printf（"请输入两个整数，用空格隔开\n"）;
+   scanf("%d%d",&a,&b);//&字符在SCANF必须存在
+   sum=a+b;
+   printf("sum=%d\n",sum);
+   return 0;
+}
+任意输入三个数，求这三个数绝对值的平均数
+#include<stdio.h>
+#include<math.h>
+#pragma warning(disable:4996) 因为VS2013里面涉及到scanf函数，所有要加这个
+
+int main()
+
+{
+	int a, b, c, av;
+	printf("请输入三个整数，数之间用空格隔开\n");
+	scanf("%d %d %d", &a, &b, &c);
+	av = (abs(a) + abs(b) + abs(c)) / 3;
+	printf("av=%d\n", av);
+	
+    return 0;
+
+}
