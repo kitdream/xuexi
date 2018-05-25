@@ -1,0 +1,14 @@
+数据类型为 int short long
+   unsigned  int  short  long 
+取值范围；int   -2147483648~+2147483647 （4byte）
+unsigned  int  0-4294967295 (4byte)   
+         short  -32767~+32768  (2byte)
+unsigned short  0~65536 (2byte)
+         long   -2147483648~+2147483647 
+     longlong   -9223372036854775808~+9223372036854775807   (8byte)
+	char -128~+127 (1byte)
+计算方式；
+bits = 数据类型的字节数*8      位数=字节*8
+有符号的数据类型 -2^（bits-1）~(2(bits-1))-1
+例如int型的取值范围  -2^(8-1)~(2^(8-1))-1=-2^7~2^7-1
+无符号的数据类型  (2^bits）-1
