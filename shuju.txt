@@ -1,0 +1,177 @@
+#include<stdio.h>
+int main()
+{
+  int a,b,sum;
+  a=22;b=234;  
+  sum=a+b;
+  printf("sum=%d\n",sum); 
+  return 0
+}
+#include<stdio.h>
+#pragma warning(disable:4996)
+int main()
+{
+   int a,b,sum;
+   printf（"请输入两个整数，用空格隔开\n"）;
+   scanf("%d%d",&a,&b);//&字符在SCANF必须存在，SCANF里面的是要输入的函数
+   sum=a+b;
+   printf("sum=%d\n",sum);
+   return 0;
+}
+任意输入三个数，求这三个数绝对值的平均数
+#include<stdio.h>
+#include<math.h>
+#pragma warning(disable:4996) 因为VS2013里面涉及到scanf函数，所有要加这个
+
+int main()
+
+{
+	int a, b, c, av;
+	printf("请输入三个整数，数之间用空格隔开\n");
+	scanf("%d %d %d", &a, &b, &c);
+	av = (abs(a) + abs(b) + abs(c)) / 3;
+	printf("av=%d\n", av);
+	
+    return 0;
+
+}
+#include<stdio.h>
+#pragma warning(disable:4996)
+int main()
+
+{
+
+	double cm, foot, inch;
+
+	scanf("%lf", &cm);
+
+	foot = cm / 30.48;
+
+	inch = (foot - (int)foot)*12.0;
+
+	printf("%d %d", (int)foot, (int)inch);
+
+	return 0;
+
+}
+
+
+
+}
+#include<stdio.h>
+#pragma warning(disable:4996)
+int main()
+{
+	//对变量进行初始化；
+	int bill = 0;
+	int price = 0;
+	printf("请输入金额：\n");
+	scanf("%d", &bill);
+	printf("请输入票面:\n");
+	scanf("%d", &price);
+	//进行判断
+	if (bill <= price){
+		printf("应该找您 %d\n", price - bill);
+	}
+	return 0;
+}
+#include<stdio.h>
+#pragma warning(disable:4996)
+int main()
+{
+	const int MINOR = 35;
+	int age = 0;
+	printf("请输入你的年龄；\n");
+	scanf("%d", &age);
+	printf("你的年龄是%d岁\n", age);
+	if (age < MINOR){
+		printf("你的青春是美好的,");
+	}
+	printf("在你的年纪，你应该释放自己的光芒\n");
+
+	return 0;
+}
+#include<stdio.h>
+#pragma warning(disable:4996)
+int main()
+{
+	const int PASS = 60;
+	int score ;
+	printf("请输入你的成绩；\n");
+	scanf("%d", &score);
+	printf("你的成绩是%d\n", score);
+	if (score < PASS)
+		printf("对不起，你没有及格\n");
+	else
+		printf("恭喜你，你及格了\n");
+	printf("再见");
+	return 0;
+	
+}
+#include<stdio.h>
+#pragma warning(disable:4996)
+int main()
+{
+	
+	int x ;
+	printf("请输入你的成绩；\n");
+	scanf("%d", &x);
+	printf("输出%d,", x /= 10);// x/=10 ==  x=x/10
+	return 0;
+	
+}
+判断输入的数值有几位
+#include<stdio.h>
+#pragma warning(disable:4996)
+int main()
+{
+	
+	int x ;
+	int n = 0;
+	scanf("%d", &x);// 输入x
+	n++;    // n加1
+	x /= 10;// x/10
+	while (x > 0){   //判断x是否大于0.大于则执行大括号里面的循环体。直到x不大于0；
+		n++;
+		x /= 10;
+	}
+	printf("%d\n", n);
+	return 0;
+	
+}
+阶乘 1^N
+#include<stdio.h>
+#pragma warning(disable:4996)
+int main()
+{
+	
+	int n ;
+	scanf("%d", &n);
+	int fact = 1;
+	int i =1;
+	while ( i <= n) {
+		fact *= i;
+		i++;
+	
+	}
+	printf("%d %d\n", n,fact);
+	return 0;
+	
+}
+#include<stdio.h>
+#pragma warning(disable:4996)
+int main()
+{
+	
+	int n ;
+	scanf("%d", &n);
+	int fact = 1;
+	int i =1;
+	for (i = 1; i <= n; i++){
+		fact *= i;
+	
+	}
+	printf("%d %d\n", n,fact);
+	return 0;
+	
+}
